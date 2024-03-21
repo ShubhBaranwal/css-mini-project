@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            transition: all 5s;
+            transition: all 0.7s;
+        }
+
+        nav ul li {
+            border-radius: 50px;
+            color: rgb(59, 62, 66);
+            border: 1px solid black;
+            padding: 10px 20px;
+            position: relative;
+            transition: all 0.7s;
+            overflow: hidden;
+        }
+
+        nav ul li::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            background-color: black;
+            transition: all 0.4s;
+        }
+         nav ul li:hover::after{
+            bottom: 0;
+            /* color:white; */
+            border-radius: 0;
+            color: white;
+         }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            position: relative;
+            z-index: 9;
+        }
+        nav ul li:hover a{
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="./images/Inspire office spaces.png" width="200px" alt="">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Blog</a></li>
+        </ul>
+
+    </nav>
+
+</body>
+
+</html>
